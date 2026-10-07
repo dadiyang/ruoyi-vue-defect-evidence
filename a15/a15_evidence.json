@@ -1,0 +1,6 @@
+{
+  "step2_before_disable": 200,
+  "step4_after_disable_direct": 200,
+  "step5_after_edit_refresh": 200,
+  "step6_after_forcelogout": 401
+}
