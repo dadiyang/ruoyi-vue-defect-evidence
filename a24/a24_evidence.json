@@ -1,0 +1,21 @@
+{
+  "defect": "A24",
+  "run_at": "2026-10-08 03:55",
+  "target": "RuoYi-Vue master @ 13db1fc, http://127.0.0.1:8080, 默认构建默认配置",
+  "steps_and_output": {
+    "dict_type_created": "dict_pdu1008035508",
+    "add1": {"req": {"dictType": "dict_pdu1008035508", "dictValue": "dupval", "dictLabel": "标签A", "dictSort": 1}, "resp": "200 操作成功"},
+    "add2": {"req": {"dictType": "dict_pdu1008035508", "dictValue": "dupval", "dictLabel": "标签B", "dictSort": 2}, "resp": "200 操作成功（应被拒绝）"},
+    "db_rows": [{"dict_code": 206, "dict_label": "标签A", "dict_value": "dupval"}, {"dict_code": 207, "dict_label": "标签B", "dict_value": "dupval"}],
+    "consume_type": [{"dictLabel": "标签A", "dictValue": "dupval"}, {"dictLabel": "标签B", "dictValue": "dupval"}],
+    "redis_cache_sys_dict_type": "含两条同值记录（dictCode 206/207）",
+    "cleanup": "两行删除+类型删除，残留 0 已实证"
+  },
+  "code_locations": {
+    "controller_no_check": "ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysDictDataController.java:89-95",
+    "service_no_check": "全仓 grep 无 checkDictDataUnique；类型侧对照 checkDictTypeUnique 存在",
+    "db_no_unique_index": "sql/ry_20260417.sql:496 仅 primary key (dict_code)",
+    "label_lookup_last_wins": "ruoyi-common/src/main/java/com/ruoyi/common/utils/DictUtils.java:99 HashMap put 覆盖"
+  },
+  "engine": {"project": "ruoyi-vue", "round": 12, "job": 2311, "pin_case": "DICT-11", "result": "FAIL（首跑即红）", "assertion": "DICT-11 同类型同值重复新增应被拒（字典值应类型内唯一），实际 code=200 操作成功"}
+}
