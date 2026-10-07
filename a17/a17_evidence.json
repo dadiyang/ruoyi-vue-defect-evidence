@@ -1,0 +1,24 @@
+{
+  "atk_permissions": [
+    "monitor:cache:list"
+  ],
+  "cache_names": [
+    "login_tokens:",
+    "sys_config:",
+    "sys_dict:",
+    "captcha_codes:",
+    "repeat_submit:",
+    "rate_limit:",
+    "pwd_err_cnt:"
+  ],
+  "login_token_keys_seen": 9,
+  "clearCacheName_code": 200,
+  "victim_getInfo_after": 401,
+  "oper_log_clearCache_rows": 0,
+  "config_add_code": 200,
+  "oper_log_config_add_rows": 3,
+  "bad_login_code": 500,
+  "pwd_err_cnt_after_fail": "1",
+  "clearCacheKey_code": 200,
+  "pwd_err_cnt_after_del": null
+}
