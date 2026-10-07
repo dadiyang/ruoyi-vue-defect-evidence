@@ -61,7 +61,7 @@ def main():
 
     # 基线：有参数管理权限
     h, r = api.get("/system/config/1", token=ut)
-    evidence["before_disable"] = r.get("code")  # 期望 200
+    evidence["step2_before_disable"] = r.get("code")  # 期望 200
 
     # 4) 停用角色（UI 截图）
     from playwright.sync_api import sync_playwright
@@ -98,17 +98,28 @@ def main():
 
     # 5) 停用后旧会话直接访问受控接口
     h, r = api.get("/system/config/1", token=ut)
-    evidence["after_disable_direct"] = r.get("code")  # 期望 401/403，实际 200
+    evidence["step4_after_disable_direct"] = r.get("code")  # 期望 401/403，实际 200
     h, r = api.get("/system/config/list", token=ut, params={"pageNum": 1, "pageSize": 5})
-    evidence["after_disable_list"] = r.get("code")  # 实际 200
+    evidence["step4_after_disable_list"] = r.get("code")  # 实际 200
 
-    # 对照腿：编辑角色收回菜单授权 → 旧会话即时 403（刷新机制在位）
+    # step5：编辑角色（菜单不变）触发 refreshPermissionByRoleId——刷新执行了，
+    # 但 getMenuPermission 按会话缓存角色对象的状态('0'快照)重算，刷不掉停用角色权限
+    h, r = api.put("/system/role", token=at, body={
+        "roleId": role_id, "roleName": ROLE_NAME, "roleKey": ROLE_KEY,
+        "roleSort": "9", "status": "1", "dataScope": "1", "deptIds": [],
+        "menuIds": [menu_id_by_perms("system:config:list", "C"),
+                    menu_id_by_perms("system:config:query", "F")]})
+    assert r.get("code") == 200, r
+    h, r = api.get("/system/config/1", token=ut)
+    evidence["step5_after_edit_refresh"] = r.get("code")  # 期望 401/403，实际 200
+
+    # 对照腿：编辑角色收回菜单授权 → 旧会话即时 403（菜单走 DB 重查，刷新机制在位）
     h, r = api.put("/system/role", token=at, body={
         "roleId": role_id, "roleName": ROLE_NAME, "roleKey": ROLE_KEY,
         "roleSort": "9", "status": "1", "dataScope": "1", "deptIds": [], "menuIds": []})
     assert r.get("code") == 200, r
     h, r = api.get("/system/config/1", token=ut)
-    evidence["after_edit_role_direct"] = r.get("code")  # 对照：403 生效
+    evidence["control_menu_revoke_direct"] = r.get("code")  # 对照：403 生效
     # 恢复菜单授权（换绑腿需要"有权限"的起点角色）
     h, r = api.put("/system/role", token=at, body={
         "roleId": role_id, "roleName": ROLE_NAME, "roleKey": ROLE_KEY,
@@ -157,6 +168,7 @@ def main():
         json.dump(evidence, f, ensure_ascii=False, indent=2)
     print("== evidence ==")
     print(json.dumps(evidence, ensure_ascii=False, indent=2))
+    return evidence
 
 
 if __name__ == "__main__":
