@@ -1,0 +1,23 @@
+{
+ "ts": "2026-10-08T03:12:06",
+ "username": "a11imp1008031206xxxxxxxxx",
+ "len": 25,
+ "import_resp": {
+  "msg": "恭喜您，数据已全部导入成功！共 1 条，数据如下：<br/>1、账号 a11imp1008031206xxxxxxxxx 导入成功",
+  "code": 200
+ },
+ "db_row": {
+  "user_id": 1072
+ },
+ "login_ui_toast": "用户不存在/密码错误",
+ "login_still_on": true,
+ "logininfor": [
+  {
+   "status": "1",
+   "msg": "用户不存在/密码错误"
+  }
+ ],
+ "cleanup": {
+  "user_remaining": 0
+ }
+}
