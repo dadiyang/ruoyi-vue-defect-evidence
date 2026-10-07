@@ -1,0 +1,29 @@
+{
+  "index_unauth_http": 200,
+  "login_page_http": 200,
+  "login_page_has_form": true,
+  "submitLogin": {
+    "http": 200,
+    "body": "success"
+  },
+  "sql_json": {
+    "http": 200,
+    "entries": 253,
+    "bytes": 324743,
+    "sample": [
+      "CREATE TABLE gen_t_clean1 (",
+      "CREATE TABLE gen_t_order1 (",
+      "CREATE TABLE t_rgen_a9probe_ok ("
+    ]
+  },
+  "datasource_json": {
+    "http": 200,
+    "url": "jdbc:mysql://localhost:3306/ry_vue_baseline?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8",
+    "dbType": "mysql",
+    "driver": "com.mysql.cj.jdbc.Driver"
+  },
+  "weburi_json": {
+    "http": 200,
+    "uri_entries": 1000
+  }
+}
