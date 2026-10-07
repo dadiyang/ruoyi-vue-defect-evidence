@@ -35,7 +35,7 @@ SysMenuController.java
 对照（同数据域均有防线）：
   SysRoleController :78-80  GET /{roleId}  @PreAuthorize system:role:query
   SysRoleController :56-58  GET /list      @PreAuthorize system:role:list
-  SysMenuController :35-37  GET /list      @PreAuthorize system:menu:list
+  SysMenuController :40-42  GET /list      @PreAuthorize system:menu:list
 权限位 system:role:query 在种子菜单(1007 角色查询)存在——注解缺失是遗漏而非"无权限位可挂"。
 ```
 
