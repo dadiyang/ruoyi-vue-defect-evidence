@@ -1,0 +1,72 @@
+{
+ "ts": "2026-10-08T03:18:06",
+ "user": {
+  "username": "u_a22r1008031806",
+  "len": 16
+ },
+ "legs": [
+  {
+   "leg": "self_updatePwd_4ch",
+   "write_http": 200,
+   "write": {
+    "msg": "操作成功",
+    "code": 200
+   },
+   "login": [
+    200,
+    {
+     "msg": "用户不存在/密码错误",
+     "code": 500
+    }
+   ]
+  },
+  {
+   "leg": "resetPwd_1ch",
+   "write_http": 200,
+   "write": {
+    "msg": "操作成功",
+    "code": 200
+   },
+   "login": [
+    200,
+    {
+     "msg": "用户不存在/密码错误",
+     "code": 500
+    }
+   ]
+  },
+  {
+   "leg": "resetPwd_30ch",
+   "write_http": 200,
+   "write": {
+    "msg": "操作成功",
+    "code": 200
+   },
+   "login": [
+    200,
+    {
+     "msg": "用户不存在/密码错误",
+     "code": 500
+    }
+   ]
+  },
+  {
+   "leg": "resetPwd_5ch_control",
+   "write_http": 200,
+   "write": {
+    "msg": "操作成功",
+    "code": 200
+   },
+   "login": "TOKEN_OK"
+  }
+ ],
+ "logininfor_last": [
+  {
+   "status": "1",
+   "msg": "用户不存在/密码错误"
+  }
+ ],
+ "cleanup": {
+  "user_remaining": 0
+ }
+}
