@@ -1,0 +1,49 @@
+{
+ "ts": "2026-10-08T02:58:38",
+ "seed": {
+  "menu_ids": [
+   2214,
+   2215
+  ],
+  "target_role_id": 433,
+  "low_user": "u_a20lowu1008025838",
+  "low_role_menu_count": 0
+ },
+ "low_user": {
+  "permissions": [],
+  "roles": [
+   "role_a20low1008025838"
+  ]
+ },
+ "leak_own_role": {
+  "code": 200,
+  "checkedKeys": [
+   2214,
+   2215
+  ],
+  "expected_leaked": [
+   2214,
+   2215
+  ],
+  "menus_visible_to_caller": 0
+ },
+ "leak_seed_role2": {
+  "code": 200,
+  "checkedKeys_count": 68
+ },
+ "leak_seed_role1": {
+  "code": 200,
+  "checkedKeys_count": 0
+ },
+ "contrast": {
+  "role_detail": 403,
+  "role_list": 403,
+  "menu_list": 403,
+  "menu_treeselect_self": 200
+ },
+ "cleanup": {
+  "menu_remaining": 0,
+  "role_remaining": 0,
+  "user_remaining": 0
+ }
+}
