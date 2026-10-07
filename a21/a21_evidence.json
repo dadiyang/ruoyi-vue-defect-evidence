@@ -1,0 +1,25 @@
+{
+ "ts": "2026-10-08T03:05:21",
+ "seed": {
+  "notice_id": 69,
+  "title": "notice_a211008030521",
+  "db_raw_has_script": true,
+  "db_raw_has_onerror": true
+ },
+ "api": {
+  "detail_readback_has_script": true,
+  "detail_readback_has_onerror": true
+ },
+ "victim": {
+  "user": "u_a21vicu1008030521",
+  "permissions": [],
+  "listTop_sees_notice": true,
+  "browser_exec_onerror": "pwned",
+  "browser_exec_script_tag": null
+ },
+ "cleanup": {
+  "notice_remaining": 0,
+  "user_remaining": 0,
+  "role_remaining": 0
+ }
+}
