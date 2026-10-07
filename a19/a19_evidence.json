@@ -1,0 +1,40 @@
+{
+ "ts": "2026-10-08T02:52:06",
+ "seed": {
+  "ids": {
+   "a19Parent": 2205,
+   "a19M3": 2206,
+   "a19M31": 2207
+  },
+  "treeselect_has_all3": true
+ },
+ "ui": {
+  "parent_options_visible": [
+   "a19Parent",
+   "a19M3",
+   "a19M31"
+  ],
+  "self_selectable": true,
+  "descendant_selectable": true,
+  "edit_http": 200,
+  "edit_body": {
+   "msg": "操作成功",
+   "code": 200
+  },
+  "tree_rows_with_a19_after_save": 1
+ },
+ "verify": {
+  "treeselect_has_parent": true,
+  "treeselect_has_m3": false,
+  "flat_list_rows": 3,
+  "parent_id_map": {
+   "a19Parent": 0,
+   "a19M31": 2206,
+   "a19M3": 2207
+  },
+  "cycle": true
+ },
+ "cleanup": {
+  "remaining": 0
+ }
+}
