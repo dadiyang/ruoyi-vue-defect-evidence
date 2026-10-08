@@ -1,0 +1,18 @@
+{
+ "ts": "2026-10-08T10:54:22",
+ "build": "fix/a3-dept-cycle-check@5c1ec06",
+ "cycle_reject": {
+  "code": 500,
+  "msg": "修改部门'dept_a3pfP1008105423'失败，上级部门不能是其子孙"
+ },
+ "ancestors_after_reject": {
+  "P": "0,100",
+  "C": "0,100,746",
+  "G": "0,100,746,747"
+ },
+ "legal_move": {
+  "code": 200,
+  "C.ancestors": "0,100,749",
+  "G.ancestors": "0,100,749,747"
+ }
+}
