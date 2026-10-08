@@ -1,0 +1,25 @@
+{
+ "ts": "2026-10-08T11:13:08",
+ "build": "fix/a24-dictdata-value-unique@17a659a",
+ "first_add": {
+  "code": 200,
+  "msg": "操作成功"
+ },
+ "dup_add": {
+  "code": 500,
+  "msg": "新增字典数据'dupv'失败，字典值在该字典类型内已存在"
+ },
+ "rows_after_dup": 1,
+ "edit_self_same": {
+  "code": 200,
+  "msg": "操作成功"
+ },
+ "diff_value_add": {
+  "code": 200,
+  "msg": "操作成功"
+ },
+ "edit_collide": {
+  "code": 500,
+  "msg": "修改字典数据'dupv'失败，字典值在该字典类型内已存在"
+ }
+}
