@@ -1,0 +1,11 @@
+{
+ "ts": "2026-10-08T09:53:41",
+ "build": "fix/a19-menu-cycle-check@da385ca + ui@a2cd198",
+ "api_reject": {
+  "msg": "修改菜单'menu_a19pfM1008095341'失败，上级菜单不能选择自己或自己的子菜单",
+  "code": 500
+ },
+ "tree_contains_self": false,
+ "tree_contains_child": false,
+ "tree_contains_parent": true
+}

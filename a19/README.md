@@ -50,3 +50,10 @@ A19：菜单界面本身把非法选项摆到用户面前，**正常界面操作
 ## 复现脚本
 
 `repro_A19.py`（Playwright + 接口互证，输出 a19_evidence.json 与四帧截图）。
+
+## 修后对照（后端 fix/a19-menu-cycle-check@da385ca＋前端 fix/a19-menu-tree-exclude@a2cd198，换包部署复验）
+
+- a19-postfix-tree-exclude.png：编辑菜单 M 时「上级菜单」树下拉不再出现 M 自身与其子菜单 MC
+  （父 P 仍可选）；API 腿同口径拒绝：「上级菜单不能选择自己或自己的子菜单」。
+- 引擎留痕：修前 FAIL（job 2307 实例 46297）、修后 PASS（job 2328 实例 46351）、
+  恢复复验 MENU-09 回红＋MENU-01 守卫绿（job 2329）。
