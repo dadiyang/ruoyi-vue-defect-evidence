@@ -1,0 +1,19 @@
+{
+ "ts": "2026-10-08T09:20:30",
+ "build": "fix/a13-testcontroller-authz@515db1e",
+ "low_perm": {
+  "code": 403,
+  "msg": "没有权限，请联系管理员授权"
+ },
+ "admin_list": {
+  "code": 200,
+  "rows": 2,
+  "has_password_field": false
+ },
+ "admin_get1": {
+  "userId": 1,
+  "username": "admin",
+  "password": null,
+  "mobile": "15888888888"
+ }
+}

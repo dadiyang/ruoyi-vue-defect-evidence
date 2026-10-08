@@ -18,3 +18,10 @@ GET /v3/api-docs                        → 公开 4 条 /test/user/** 路径：
 `:117-118` UserEntity.password 字段随列表/查询原样返回（无脱敏）。
 对照 SysUserController 各端点均有 `@PreAuthorize("@ss.hasPermi('system:user:…')")`。
 SecurityConfig `:102-110` 白名单不含 /test/**——即需登录，但登录后不做任何权限校验。
+
+## 修后对照（fix/a13-testcontroller-authz@515db1e，换包部署复验）
+
+- a13_postfix_evidence.json：低权限用户 GET /test/user/list → code=403；
+  admin 列表 200 但响应无 password 值（脱敏）、详情 password=null。
+- 引擎留痕：修前 FAIL（job 2307 实例 46302）、修后 PASS（job 2318 实例 46333）、
+  恢复复验 TST-01 回红＋CONF-10 守卫绿（job 2319）。
