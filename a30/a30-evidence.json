@@ -1,0 +1,21 @@
+{
+ "uploads": [
+  "/profile/upload/2026/10/08/secret-contract_20261008145344A003.txt",
+  "/profile/upload/2026/10/08/secret-contract_20261008145344A004.txt"
+ ],
+ "note": "同名两次上传，落盘名仅尾部序号不同（基线 13db1fc）",
+ "anonymous_reads": [
+  {
+   "url": "/profile/upload/2026/10/08/secret-contract_20261008145344A003.txt",
+   "http": 200,
+   "bytes": 21,
+   "content": "CONFIDENTIAL-A30-EV-1"
+  },
+  {
+   "url": "/profile/upload/2026/10/08/secret-contract_20261008145344A004.txt",
+   "http": 200,
+   "bytes": 21,
+   "content": "CONFIDENTIAL-A30-EV-2"
+  }
+ ]
+}
