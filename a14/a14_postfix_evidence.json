@@ -1,0 +1,8 @@
+{
+ "ts": "2026-10-08T09:25:26",
+ "build": "fix/a14-token-invalidate@8881d06",
+ "before": 200,
+ "after_disable": 401,
+ "after_resetpwd": 401,
+ "after_delete": 401
+}

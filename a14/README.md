@@ -26,3 +26,10 @@ admin DELETE /system/user/{id}（删除用户）
 - JwtAuthenticationTokenFilter.java `:34-37` 只认 login_tokens:{uuid} 是否存在，不查用户当前状态；
 - TokenService.java `:134-141 verifyToken` 剩余不足 20 分钟自动 `:149 refreshToken` 滑动续期（持续访问则无限期有效）；
 - 对照 SysUserOnlineController.java `:75-80` forceLogout → deleteObject(login_tokens:{tokenId}) → 即时 401。
+
+## 修后对照（fix/a14-token-invalidate@8881d06，换包部署复验）
+
+- a14_postfix_evidence.json：同一用户旧令牌——停用后 401、重置密码后 401、删除账号后 401
+  （操作前 200 对照）。
+- 引擎留痕：修前 FAIL（job 2307 实例 46304）、修后 PASS（job 2320 实例 46336）、
+  恢复复验 USER-17 回红＋USER-09 守卫绿（job 2321）。
