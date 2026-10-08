@@ -63,3 +63,10 @@ admin GET /monitor/online/list 取 tokenId →
 
 素材：repro_A15.py（可重放，四腿一次跑完）、a15_evidence.json（结构化证据）、
 a15_1_role_list.png / a15_2_confirm_disable.png / a15_3_role_disabled.png（停用操作三帧）。
+
+## 修后对照（fix/a15-role-session-refresh@01e47d4，换包部署复验）
+
+- a15_postfix_evidence.json：停用角色后旧会话 403、用户换绑后旧会话 403、
+  菜单收回即时生效守卫通道仍 403（不受修复影响）。
+- 引擎留痕：修前 FAIL（job 2307：ROLE-11 实例 46300、USER-19 实例 46305）、
+  修后 PASS（job 2322：实例 46339/46340）、恢复复验双钉回红＋USER-18 守卫绿（job 2323）。

@@ -1,0 +1,15 @@
+{
+ "ts": "2026-10-08T09:31:18",
+ "build": "fix/a15-role-session-refresh@01e47d4",
+ "disable": {
+  "before": 200,
+  "after": 403
+ },
+ "rebind": {
+  "after": 403
+ },
+ "menu_revoke_guard": {
+  "before": 200,
+  "after": 403
+ }
+}
