@@ -1,0 +1,26 @@
+[
+ {
+  "request": "GET /system/user/list?pageNum=1&pageSize=10&orderByColumn=nonexist_col_xyz&isAsc=asc",
+  "http": 200,
+  "code": 500,
+  "msg": "\n### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'nonexist_col_xyz' in 'order clause'\n### The error may exist in URL [jar:nested:/home/irons/dev/ruoyi-src/RuoYi-Vue/ruoyi-admin/target/ruoyi-admin.jar/!BOOT-INF/lib/ruoyi-system-3.9.2.jar!/mapper/system/SysUserMapper.xml]\n### The error may involve com.ruoyi.system.mapper.SysUserMapper.selectUserList-Inline\n### The error occurred while setting parameters\n### SQL: SELECT u.user_id, u.dept_id, u.nick_name, u.user_name, u.email, u.avatar, u.phonenumber, u.sex, u.status, u.del_flag, u.login_ip, u.login_date, u.create_by, u.create_time, u.remark, d.dept_name, d.leader FROM sys_user u LEFT JOIN sys_dept d ON u.dept_id = d.dept_id WHERE u.del_flag = '0' order by nonexist_col_xyz asc  LIMIT ?\n### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'nonexist_col_xyz' in 'order clause'\n; bad SQL grammar []"
+ },
+ {
+  "request": "GET /monitor/operlog/list?pageNum=1&pageSize=10&orderByColumn=nonexist_col_xyz&isAsc=asc",
+  "http": 200,
+  "code": 500,
+  "msg": "\n### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'nonexist_col_xyz' in 'order clause'\n### The error may exist in URL [jar:nested:/home/irons/dev/ruoyi-src/RuoYi-Vue/ruoyi-admin/target/ruoyi-admin.jar/!BOOT-INF/lib/ruoyi-system-3.9.2.jar!/mapper/system/SysOperLogMapper.xml]\n### The error may involve com.ruoyi.system.mapper.SysOperLogMapper.selectOperLogList-Inline\n### The error occurred while setting parameters\n### SQL: SELECT oper_id, title, business_type, method, request_method, operator_type, oper_name, dept_name, oper_url, oper_ip, oper_location, oper_param, json_result, status, error_msg, oper_time, cost_time FROM sys_oper_log order by nonexist_col_xyz asc  LIMIT ?\n### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'nonexist_col_xyz' in 'order clause'\n; bad SQL grammar []"
+ },
+ {
+  "request": "GET /monitor/logininfor/list?pageNum=1&pageSize=10&orderByColumn=nonexist_col_xyz&isAsc=asc",
+  "http": 200,
+  "code": 500,
+  "msg": "\n### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'nonexist_col_xyz' in 'order clause'\n### The error may exist in URL [jar:nested:/home/irons/dev/ruoyi-src/RuoYi-Vue/ruoyi-admin/target/ruoyi-admin.jar/!BOOT-INF/lib/ruoyi-system-3.9.2.jar!/mapper/system/SysLogininforMapper.xml]\n### The error may involve com.ruoyi.system.mapper.SysLogininforMapper.selectLogininforList-Inline\n### The error occurred while setting parameters\n### SQL: SELECT info_id, user_name, ipaddr, login_location, browser, os, status, msg, login_time FROM sys_logininfor order by nonexist_col_xyz asc  LIMIT ?\n### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'nonexist_col_xyz' in 'order clause'\n; bad SQL grammar []"
+ },
+ {
+  "request": "GET /system/role/list?pageNum=1&pageSize=10&orderByColumn=nonexist_col_xyz&isAsc=asc",
+  "http": 200,
+  "code": 500,
+  "msg": "\n### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'nonexist_col_xyz' in 'order clause'\n### The error may exist in URL [jar:nested:/home/irons/dev/ruoyi-src/RuoYi-Vue/ruoyi-admin/target/ruoyi-admin.jar/!BOOT-INF/lib/ruoyi-system-3.9.2.jar!/mapper/system/SysRoleMapper.xml]\n### The error may involve com.ruoyi.system.mapper.SysRoleMapper.selectRoleList-Inline\n### The error occurred while setting parameters\n### SQL: SELECT DISTINCT r.role_id, r.role_name, r.role_key, r.role_sort, r.data_scope, r.menu_check_strictly, r.dept_check_strictly, r.status, r.del_flag, r.create_time, r.remark FROM sys_role r LEFT JOIN sys_user_role ur ON ur.role_id = r.role_id LEFT JOIN sys_user u ON u.user_id = ur.user_id LEFT JOIN sys_dept d ON u.dept_id = d.dept_id WHERE r.del_flag = '0' order by nonexist_col_xyz asc  LIMIT ?\n### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'nonexist_col_xyz' in 'order clause'\n; bad SQL grammar []"
+ }
+]

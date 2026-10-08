@@ -1,0 +1,4 @@
+139900:14:36:46.609 [http-nio-8080-exec-7] ERROR c.r.f.w.e.GlobalExceptionHandler - [handleRuntimeException,100] - 请求地址'/system/user/list',发生未知异常.
+139901-org.springframework.jdbc.BadSqlGrammarException: 
+139902-### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'nonexist_col_xyz' in 'order clause'
+139903-### The error may exist in URL [jar:nested:/home/irons/dev/ruoyi-src/RuoYi-Vue/ruoyi-admin/target/ruoyi-admin.jar/!BOOT-INF/lib/ruoyi-system-3.9.2.jar!/mapper/system/SysUserMapper.xml]
