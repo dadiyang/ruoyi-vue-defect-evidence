@@ -50,3 +50,10 @@ SysMenuController.java
 ## 复现脚本
 
 `repro_A20.py`（接口腿+对照腿+自清理，输出 a20_evidence.json）。
+
+## 修后对照（fix/a20-rolemenu-treeselect-authz@5b719da，换包部署复验）
+
+- a20_postfix_evidence.json：低权限用户 GET /system/menu/roleMenuTreeselect/{roleId} → 403；
+  admin 同调用仍 200 且 checkedKeys 正常返回（角色授权界面流不受影响）。
+- 引擎留痕：修前 FAIL（job 2307 实例 46298）、修后 PASS（job 2330 实例 46354）、
+  恢复复验 MENU-10 回红＋MENU-01 守卫绿（job 2331）。

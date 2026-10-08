@@ -1,0 +1,15 @@
+{
+ "ts": "2026-10-08T09:58:35",
+ "build": "fix/a20-rolemenu-treeselect-authz@5b719da",
+ "low_perm": {
+  "code": 403,
+  "msg": "没有权限，请联系管理员授权"
+ },
+ "admin": {
+  "code": 200,
+  "checkedKeys": [
+   100,
+   101
+  ]
+ }
+}
