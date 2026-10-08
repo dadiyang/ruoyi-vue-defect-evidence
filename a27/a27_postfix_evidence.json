@@ -1,0 +1,10 @@
+{
+  "defect": "A27",
+  "fix_branch": "fix/a27-pwd-update-date-on-create@f15e179（基于上游尖端 13db1fc）",
+  "fix_summary": "insertUser 写入设密时间（pwd_update_date），使「是否还在用初始密码」判定不再把已设自定义口令的新账号误判",
+  "postfix_observation": {
+    "engine": "修后定向复跑 USER-28 PASS（job 2384）；基线包真断言 FAIL（job 2385，兼恢复复验）",
+    "note": "首跑 job 2377 的 FAIL 系用例脚本病（缺 login 导入）不作数，脚本 v3 整改后重出证据",
+    "engine_pre": "修前 FAIL：job 2385（isDefaultModifyPwd=True 断言）"
+  }
+}

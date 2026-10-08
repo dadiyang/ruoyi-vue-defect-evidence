@@ -1,0 +1,14 @@
+{
+  "defect": "A25",
+  "fix_branch": "fix/a25-field-size-validation@9ce17a9（基于上游尖端 13db1fc）",
+  "fix_summary": "定时任务新增/修改接口启用参数校验（实体长度注解已在位）；任务组名/路由名称/负责人/备注按库列长度补长度校验注解",
+  "postfix_observation": {
+    "engine": "修后定向复跑 JOB-16/MENU-13/DEPT-13/USER-25 四例全 PASS（job 2378）；恢复基线包复跑回红（job 2379）",
+    "api_probe": [
+      "POST /monitor/job jobName=65字符 → code=500 msg=任务名称不能超过64个字符",
+      "POST /monitor/job jobName=64字符 → code=200（限长内正常保存，用后清理）",
+      "POST /system/user remark=500字符 → code=200（限长内正常保存，用后清理）"
+    ],
+    "engine_pre": "修前 FAIL：R13 全量轮 job 2376（四例均断言数据库报错原文泄漏）"
+  }
+}

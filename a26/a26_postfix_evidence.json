@@ -1,0 +1,13 @@
+{
+  "defect": "A26",
+  "fix_branch": "fix/a26-rolekey-no-comma@266af71（基于上游尖端 13db1fc）",
+  "fix_summary": "角色保存侧校验权限字符格式（禁逗号），消除读取端按逗号拆分与判定端整串比较的口径差",
+  "postfix_observation": {
+    "engine": "修后定向复跑 ROLE-16 PASS（job 2381，走保存被拒分支）；恢复基线包复跑回红（job 2382）",
+    "api_probe": [
+      "POST /system/role roleKey=含逗号 → code=500 msg=权限字符不能包含逗号",
+      "POST /system/role roleKey=正常 → code=200（正常保存不受影响，用后清理）"
+    ],
+    "engine_pre": "修前 FAIL：R13 全量轮 job 2376；断言整改（双路径不变量）后基线复跑仍 FAIL（job 2380）"
+  }
+}
