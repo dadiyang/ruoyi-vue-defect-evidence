@@ -1,0 +1,16 @@
+{
+ "ts": "2026-10-08T09:15:47",
+ "build": "fix/a12-configkey-authz@a834022",
+ "low_perm_user": {
+  "msg": "没有权限，请联系管理员授权",
+  "code": 403
+ },
+ "admin": {
+  "code": 200,
+  "value": "SECRET-V-A12PF"
+ },
+ "no_token_body": {
+  "msg": "请求访问：/system/config/configKey/cfg.a12pf1008091547，认证失败，无法访问系统资源",
+  "code": 401
+ }
+}
