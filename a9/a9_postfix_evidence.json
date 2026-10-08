@@ -1,0 +1,17 @@
+{
+ "ts": "2026-10-08T10:32:42",
+ "build": "fix/a9-createTable-statement-whitelist@a5af8eb",
+ "sleep_time_ddl": {
+  "code": 200,
+  "msg": "操作成功"
+ },
+ "table_created": true,
+ "mixed_drop": {
+  "code": 500,
+  "msg": "创建表失败，仅允许 CREATE TABLE 语句，检测到其他语句类型：SQLDropTableStatement"
+ },
+ "drop_only": {
+  "code": 500,
+  "msg": "创建表失败，仅允许 CREATE TABLE 语句，检测到其他语句类型：SQLDropTableStatement"
+ }
+}
