@@ -50,3 +50,9 @@ GET /system/notice/listTop（:89-101 无鉴权注解）← 受害者入口登录
 ## 复现脚本
 
 `repro_A21.py`（API 双腿 + 受害者 UI 腿 + 自清理，输出 a21_evidence.json 与两帧截图）。
+
+## 修后对照（fix/a21-notice-xss-sanitize@2c5d3af，换包部署复验）
+
+- A21_postfix_victim_preview.png：同一载荷公告，修复构建下零权限受害者预览——脚本不执行
+  （window 探针为 null）、富文本保留；库内 notice_content 已无 script/on*（a21_postfix_evidence.json）。
+- 引擎留痕：修前 FAIL（job 2307）、修后 PASS（job 2312）、恢复复验 NOTI-07 回红＋NOTI-06 守卫绿（job 2313）。

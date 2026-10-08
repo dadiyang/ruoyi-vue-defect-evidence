@@ -1,0 +1,18 @@
+{
+ "ts": "2026-10-08T09:02:01",
+ "build": "fix/a21-notice-xss-sanitize@2c5d3af",
+ "db_after_fix": {
+  "has_script": false,
+  "has_onerror": false,
+  "keeps_p_tag": true,
+  "content_head": "<p>常规富文本</p><img>"
+ },
+ "victim_after_fix": {
+  "browser_exec_onerror": null,
+  "browser_exec_script_tag": null,
+  "rich_text_visible": true
+ },
+ "cleanup": {
+  "notice_remaining": 0
+ }
+}
