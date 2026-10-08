@@ -1,0 +1,13 @@
+{
+ "ts": "2026-10-08T10:10:56",
+ "build": "fix/a4-importtemplate-authz@72d1779",
+ "low_perm": {
+  "http": 200,
+  "body": "{\"msg\":\"没有权限，请联系管理员授权\",\"code\":403}"
+ },
+ "admin": {
+  "http": 200,
+  "bytes": 3904,
+  "is_xlsx": true
+ }
+}
