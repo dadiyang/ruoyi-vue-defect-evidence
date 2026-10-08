@@ -1,0 +1,21 @@
+{
+ "ts": "2026-10-08T10:49:51",
+ "build": "fix/a22-pwd-length-align@b6626c5",
+ "reset_1字符": {
+  "code": 500,
+  "msg": "密码长度必须在5到20个字符之间"
+ },
+ "reset_30字符": {
+  "code": 500,
+  "msg": "密码长度必须在5到20个字符之间"
+ },
+ "password_unchanged": true,
+ "profile_4char": {
+  "code": 500,
+  "msg": "密码长度必须在5到20个字符之间"
+ },
+ "control_5char": {
+  "reset_code": 200,
+  "login_ok": true
+ }
+}
