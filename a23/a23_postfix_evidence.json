@@ -1,0 +1,15 @@
+{
+ "ts": "2026-10-08T10:03:43",
+ "build": "RuoYi-Vue3 fix/a23-config-default-not-built-in@bae3b27",
+ "default_radio_text": "是否",
+ "default_is_no": true,
+ "db_config_type": "N",
+ "delete_ui_created": {
+  "code": 200,
+  "msg": "操作成功"
+ },
+ "delete_built_in_blocked": {
+  "code": 500,
+  "msg": "内置参数【a23pf1008100343Y】不能删除 "
+ }
+}
