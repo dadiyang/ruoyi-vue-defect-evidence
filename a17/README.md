@@ -52,3 +52,10 @@ a17_1_lowpriv_cache_page.png：低权用户登录后缓存监控页——全部�
 本缺陷在于该能力被读权限放开且无审计。
 
 素材：repro_A17.py（可重放）、a17_evidence.json（结构化证据）、界面一帧。
+
+## 修后对照（fix/a17-cache-clear-authz@c2f58b3，换包部署复验）
+
+- a17_postfix_evidence.json：读权限用户删除 403；admin 删任意前缀键被白名单拒绝（明确文案）；
+  admin 删合法前缀键 200；sys_oper_log 出现 clearCache 方法行（审计在案）。
+- 引擎留痕：修前 FAIL（job 2307 实例 46284）、修后 PASS（job 2326 实例 46348，
+  同 job CACHE-06 守卫绿）、恢复复验 CACHE-09 回红＋CACHE-06 绿（job 2327）。

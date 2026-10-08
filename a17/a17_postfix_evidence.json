@@ -1,0 +1,17 @@
+{
+ "ts": "2026-10-08T09:42:24",
+ "build": "fix/a17-cache-clear-authz@c2f58b3",
+ "low_perm_clear": {
+  "msg": "没有权限，请联系管理员授权",
+  "code": 403
+ },
+ "admin_unknown_prefix": {
+  "msg": "缓存键名不属于缓存监控页管理的缓存，禁止删除",
+  "code": 500
+ },
+ "admin_known_prefix": {
+  "msg": "操作成功",
+  "code": 200
+ },
+ "oper_log_rows": 5
+}
