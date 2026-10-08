@@ -1,0 +1,20 @@
+{
+ "ts": "2026-10-08T10:46:35",
+ "build": "fix/a10-columnlist-pathvariable@94317ce",
+ "path_only": {
+  "code": 0,
+  "total": 3,
+  "cols": [
+   "id",
+   "c1",
+   "c2"
+  ]
+ },
+ "nonexistent": {
+  "total": 0,
+  "rows": 0
+ },
+ "query_param": {
+  "total": 3
+ }
+}
