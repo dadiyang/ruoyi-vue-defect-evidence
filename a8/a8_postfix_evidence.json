@@ -1,0 +1,22 @@
+{
+ "ts": "2026-10-08T11:01:12",
+ "build": "fix/a8-import-dedup@1ba868c",
+ "first_import": {
+  "code": 200,
+  "msg": "操作成功"
+ },
+ "dup_import": {
+  "code": 500,
+  "msg": "导入失败，表【t_r8pfA1008110113】已导入"
+ },
+ "rows_after_dup": 1,
+ "columns_after_dup": 2,
+ "new_table_import": {
+  "code": 200,
+  "msg": "操作成功"
+ },
+ "mixed_batch": {
+  "code": 200,
+  "msg": "导入成功；已跳过重复导入的表：t_r8pfA1008110113"
+ }
+}
