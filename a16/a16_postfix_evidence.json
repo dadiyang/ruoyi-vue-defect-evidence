@@ -1,0 +1,16 @@
+{
+ "ts": "2026-10-08T09:36:01",
+ "build": "fix/a16-druid-default-off@6531535",
+ "login_html": {
+  "http": 200,
+  "body": "{\"msg\":\"请求访问：/druid/login.html，认证失败，无法访问系统资源\",\"code\":401}"
+ },
+ "submitLogin": {
+  "http": 200,
+  "body": "{\"msg\":\"请求访问：/druid/submitLogin，认证失败，无法访问系统资源\",\"code\":401}"
+ },
+ "sql_json": {
+  "http": 200,
+  "body": "{\"msg\":\"请求访问：/druid/sql.json，认证失败，无法访问系统资源\",\"code\":401}"
+ }
+}

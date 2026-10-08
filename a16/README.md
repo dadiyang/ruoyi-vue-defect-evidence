@@ -47,3 +47,10 @@
 仅 /druid/** 因 permitAll+默认凭据三道门全破。
 
 素材：repro_A16.py（可重放）、a16_evidence.json（结构化证据）、界面两帧。
+
+## 修后对照（fix/a16-druid-default-off@6531535，换包部署复验）
+
+- a16_postfix_evidence.json：/druid/login.html、submitLogin（默认凭据）、sql.json 三腿
+  均回 code=401（认证失败）——监控台默认关闭且 /druid/** 不再匿名放行。
+- 引擎留痕：修前 FAIL（job 2307 实例 46301）、修后 PASS（job 2324 实例 46344）、
+  恢复复验 SRV-04 回红＋CONF-10 守卫绿（job 2325）。
