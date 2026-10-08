@@ -1,0 +1,18 @@
+{
+ "ts": "2026-10-08T10:17:51",
+ "build": "fix/a5-job-whitelist-bean-exists@99e3804",
+ "no_such_bean": {
+  "code": 500,
+  "msg": "新增任务'a5pfNoSuch1008101751'失败，目标字符串不在白名单内"
+ },
+ "legal_target": {
+  "code": 200,
+  "msg": "操作成功"
+ },
+ "fqcn_reject": {
+  "code": 500,
+  "msg": "新增任务'a5pfFqcn1008101751'失败，目标字符串不在白名单内"
+ },
+ "error_lines_since_mark": 0,
+ "error_sample": []
+}
