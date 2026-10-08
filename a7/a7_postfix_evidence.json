@@ -1,0 +1,18 @@
+{
+ "ts": "2026-10-08T10:27:33",
+ "build": "fix/a7-log-date-range-day-grain@8f878df",
+ "operlog_today": {
+  "total": 1054
+ },
+ "operlog_yesterday": {
+  "total": 0
+ },
+ "operlog_full_ts": {
+  "total": 1054
+ },
+ "logininfor_today": {
+  "total": 263
+ },
+ "db_operlog_today": 1054,
+ "db_operlog_yesterday": 0
+}
