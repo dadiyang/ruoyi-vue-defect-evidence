@@ -1,0 +1,17 @@
+{
+ "ts": "2026-10-08T10:22:48",
+ "build": "fix/a6-job-name-unique@b711b91",
+ "dup_same_group": {
+  "code": 500,
+  "msg": "新增任务'a6pf1008102248'失败，任务名称在该任务组内已存在"
+ },
+ "rows_after_dup": 1,
+ "same_name_other_group": {
+  "code": 200,
+  "msg": "操作成功"
+ },
+ "edit_no_rename": {
+  "code": 200,
+  "msg": "操作成功"
+ }
+}
